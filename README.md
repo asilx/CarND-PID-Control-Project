@@ -2,6 +2,21 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+## My Implementation
+
+In this version, I kept PID controller for steering as simple as possible like Sebastian Thrun's python implementation in the lecture.
+I didn't use Twiddle for obtaining thau values for "P", "I", "D". Instead I experimented random tau values starting with Thrun's taus.
+As, again, for the simplicity reasons, I haven't added another PID controller for throttle to keep the speed relatively stable. On the
+other hand, making this to happen is just to matter add another PID variable and adjust taus for that.
+
+As from Thrun's lecture. Proportinality "P" tries to keep the car to the lane while differentality "D" helps to eliminate overshooting,
+and integrality "I" compansates for steering drift (or bias).
+
+## Final Taus
+
+By a lot of testing with random parameters, I found relatively stable controlling with tau_p as 0.11, tau_i as 0.0018, and tau_d as 2.4.
+As I haven't used Twiddle, I cannot guarantee that these taus are the "best optimal" ones.
+
 
 ## Dependencies
 
